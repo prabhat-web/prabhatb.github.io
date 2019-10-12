@@ -1,0 +1,20 @@
+<body>    
+        <div id="container">
+                <div id="header">
+                     <h1>Country Information</h1>
+                    <div class="col">
+                        <select (ngModelChange)="showInfo($event)" [(ngModel)]="selectedCountry">
+                            <option *ngFor="let counrty of countrydetails" [value]="counrty.name">{{counrty.name}}</option>
+            
+                        </select>
+                    </div>
+            
+                </div>
+            
+                <div id="container">
+                    <div class="col">
+                        <img *ngIf="showImage" [src]="flagImage" alt="flag-image" class="image">
+                    </div>
+                </div>
+            </div>
+</body>
